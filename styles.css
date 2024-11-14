@@ -1,0 +1,220 @@
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scroll-behavior: smooth;
+    background-color: #f5f5dc;
+    color: #333;
+    font-size: 16px;
+}
+
+body {
+    max-width: 100%; /* Ensure no horizontal scroll */
+}
+
+/* Ensure proper viewport scaling for mobile */
+
+/* Universal Container Adjustment */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+/* Button Styling */
+button {
+    background-color: #333; /* Dark background */
+    color: #f5f5dc; /* Beige color for the text */
+    border: 2px solid #f5f5dc; /* Beige border */
+    padding: 10px 20px;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #666; /* Slightly lighter on hover */
+    color: #f5f5dc; /* Keep the text beige */
+    border-color: #bbb; /* Lighter beige border on hover */
+}
+
+/* Link Styling */
+a {
+    color: #d2b48c; /* Beige color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #bcae90; /* Slightly darker beige on hover */
+}
+
+/* Logo and Zipper Styling */
+.logo-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 2s ease-in-out, left 2s ease-in-out, opacity 1.5s ease-in-out;
+    opacity: 1;
+    z-index: 10;
+    max-width: 100%;
+}
+
+#logo {
+    width: 80px;
+    max-width: 100%;
+    transition: transform 2s ease-in-out;
+}
+
+/* QR Code Styling - Slightly Larger on Laptop Screens */
+.qr-code {
+    width: 70px; /* Increased size for laptop screens */
+    height: auto;
+    margin-top: 15px;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .qr-code {
+        width: 60px; /* Keep it smaller for mobile screens */
+    }
+}
+
+/* Footer Logo Adjustments */
+.footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer-logo {
+    width: 25px; /* Further reduced size */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #f5f5dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .welcome-message {
+        font-size: 1.8rem;
+    }
+
+    section {
+        font-size: 1.1rem;
+    }
+
+    .dynamic-island {
+        padding: 8px 10px;
+        border-radius: 15px;
+    }
+
+    .founder-content {
+        gap: 15px;
+    }
+
+    .founder-text {
+        font-size: 1rem;
+    }
+
+    .qr-code {
+        width: 60px; /* Slightly smaller for mobile */
+    }
+}
+
+/* Button Styling in Dynamic Island */
+.dynamic-island button {
+    background-color: #333; /* Darker button background */
+    color: #f5f5dc; /* Beige text */
+    border: 2px solid #f5f5dc;
+    padding: 8px 15px;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.dynamic-island button:hover {
+    background-color: #666; /* Slightly lighter on hover */
+    border-color: #bbb; /* Lighter beige border on hover */
+}
+
+/* Adjustments for Section Content */
+section {
+    font-size: 1.25rem; /* Base size */
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+    padding: 20px;
+    word-wrap: break-word;
+    width: 100%; /* Ensure full width */
+}
+
+.founder-content {
+    display: flex;
+    flex-direction: column; /* Stack content on mobile */
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.founder-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.founder-image {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.founder-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
