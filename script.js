@@ -44,6 +44,7 @@ window.onload = function () {
     }, 1500); // Initial delay before the rotation and movement start
 };
 
+// Scroll event to handle fading of sections
 function handleScroll() {
     const scrolled = window.scrollY;
     const viewportHeight = window.innerHeight;
