@@ -19,8 +19,7 @@ body {
     max-width: 100%; /* Ensure no horizontal scroll */
 }
 
-/* Add the viewport meta tag in the HTML <head> section */
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+/* Ensure proper viewport scaling for mobile */
 
 /* Universal Container Adjustment */
 .container {
@@ -100,7 +99,7 @@ a:hover {
 }
 
 .footer-logo {
-    width: 40px; /* Reduced size */
+    width: 30px; /* Reduced size */
     height: auto;
     margin-bottom: 10px;
 }
