@@ -1,0 +1,214 @@
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    width: 100%; /* Ensure no overflow */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scroll-behavior: smooth;
+    background-color: #f5f5dc;
+    color: #333;
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    max-width: 100%; /* Ensure no horizontal scroll */
+}
+
+/* Add the viewport meta tag in the HTML <head> section */
+
+/* Universal Container Adjustment */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%; /* Ensure full width without overflow */
+}
+
+/* Logo and Zipper Styling */
+.logo-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 2s ease-in-out, left 2s ease-in-out, opacity 1.5s ease-in-out;
+    opacity: 1;
+    z-index: 10;
+    max-width: 100%; /* Prevent overflow */
+}
+
+#logo {
+    width: 80px;
+    max-width: 100%;
+    transition: transform 2s ease-in-out;
+}
+
+.zipper-line {
+    position: fixed;
+    top: 50%;
+    left: 5%;
+    height: 24px;
+    width: 0;
+    background: url('data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2224%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20x%3D%221%22%20y%3D%222%22%20width%3D%224%22%20height%3D%228%22%20fill%3D%22black%22/%3E%3Crect%20x%3D%221%22%20y%3D%2214%22%20width%3D%224%22%20height%3D%228%22%20fill%3D%22black%22/%3E%3Crect%20x%3D%227%22%20y%3D%228%22%20width%3D%224%22%20height%3D%228%22%20fill%3D%22black%22/%3E%3Crect%20x%3D%227%22%20y%3D%2220%22%20width%3D%224%22%20height%3D%228%22%20fill%3D%22black%22/%3E%3C/svg%3E') repeat-x;
+    background-size: 12px 24px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: width 4s ease, opacity 1.5s ease;
+    z-index: 5;
+}
+
+/* Welcome Message */
+.welcome-message {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+    padding: 0 10px;
+    word-wrap: break-word;
+    max-width: 100%; /* Prevent overflow */
+}
+
+/* Dynamic Island Styling */
+.dynamic-island {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    width: 100%; /* Use full width */
+    background-color: #333;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.dynamic-island button {
+    color: #f5f5dc;
+    background-color: #444;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dynamic-island button:hover {
+    background-color: #666;
+}
+
+/* Content Sections */
+section {
+    font-size: 1.25rem; /* Base size */
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+    padding: 20px;
+    word-wrap: break-word;
+    width: 100%; /* Ensure full width */
+}
+
+/* QR Code Styling */
+.qr-code {
+    width: 60px;
+    height: auto;
+    margin-top: 15px;
+    max-width: 100%; /* Prevent overflow */
+}
+
+/* Founder Section Styling */
+.founder-content {
+    display: flex;
+    flex-direction: column; /* Stack content on mobile */
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.founder-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%; /* Ensure full width */
+    max-width: 800px; /* Constrain width */
+}
+
+.founder-image {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.founder-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #f5f5dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .welcome-message {
+        font-size: 1.8rem;
+    }
+
+    section {
+        font-size: 1.1rem;
+    }
+
+    .dynamic-island {
+        padding: 8px 10px;
+        border-radius: 15px;
+    }
+
+    .founder-content {
+        gap: 15px;
+    }
+
+    .founder-text {
+        font-size: 1rem;
+    }
+
+    .qr-code {
+        width: 50px;
+    }
+}
